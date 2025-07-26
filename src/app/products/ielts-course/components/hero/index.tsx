@@ -1,6 +1,6 @@
 "use client";
 
-import { Container } from "@/app/components/container";
+import { Container } from "@/components/container";
 import { ProductData } from "@/types/product";
 import { HeroTexts } from "./hero-texts";
 import { Trailer } from "./trailer";

@@ -1,4 +1,5 @@
-import { Language, ProductApiResponse } from "@/types/product";
+import { Language } from "@/types";
+import { ProductApiResponse } from "@/types/product";
 import { cache } from "react";
 
 export const fetchProductData = cache(

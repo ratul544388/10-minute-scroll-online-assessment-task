@@ -6,13 +6,15 @@ import { buttonVariants } from "@/components/ui/button";
 import { SearchInput } from "./search-input";
 import { LanguageChangerButton } from "./language-changer-button";
 import { Phone } from "lucide-react";
+import { NavLinks } from "./nav-links";
 
 const Header = () => {
   return (
-    <header className="bg-background h-header sticky top-0 z-50 w-full border-b">
+    <header className="bg-background overflow-x-clip h-header sticky top-0 z-50 w-full border-b">
       <Container className="flex h-full items-center gap-4 py-4">
         <Logo />
-        <SearchInput />
+        <SearchInput  />
+        <NavLinks className="hidden lg:block"/>
         <Suspense fallback="">
           <LanguageChangerButton />
         </Suspense>
@@ -25,9 +27,9 @@ const Header = () => {
           })}
         >
           <Phone className="size-4" />
-          16910
+          <span className="hidden sm:block">16910</span>
         </Link>
-        <div className="ml-auto">
+        <div className="">
           <Link
             href="#"
             className={buttonVariants({

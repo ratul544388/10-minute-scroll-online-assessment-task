@@ -24,7 +24,7 @@ export interface CtaText {
 
 export type SectionType =
   | "instructors"
-  | "offers"
+  | "feature_explanations"
   | "features"
   | "pointers"
   | "about";
@@ -83,4 +83,9 @@ export type About = {
   description: string;
 };
 
-export type Language = "bn" | "en";
+export type ExclusiveFeature = {
+  id: string;
+  checklist: string[];
+  file_url: string;
+  title: string;
+}

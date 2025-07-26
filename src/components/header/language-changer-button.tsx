@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { useQueryParams } from "@/hooks/use-query-params";
-import { Language } from "@/types/product";
+import { Language } from "@/types";
 
 export const LanguageChangerButton = () => {
   const { searchParams, setQueryParams } = useQueryParams();

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-export function useCrossTop<T extends HTMLElement>() {
+export function useCrossTop<T extends HTMLDivElement>() {
   const bottomRef = useRef<T | null>(null);
   const [hasCrossedTop, setHasCrossedTop] = useState(false);
 

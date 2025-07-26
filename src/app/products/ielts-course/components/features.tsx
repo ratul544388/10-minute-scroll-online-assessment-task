@@ -1,4 +1,4 @@
-import { SectionTitle } from "@/app/components/section-title";
+import { SectionTitle } from "@/components/section-title";
 import { Feature, Section } from "@/types/product";
 import Image from "next/image";
 

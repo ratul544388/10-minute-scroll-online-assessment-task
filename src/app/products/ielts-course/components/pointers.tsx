@@ -1,6 +1,6 @@
 "use client";
 
-import { SectionTitle } from "@/app/components/section-title";
+import { SectionTitle } from "@/components/section-title";
 import { Pointer, Section } from "@/types/product";
 import { Check } from "lucide-react";
 

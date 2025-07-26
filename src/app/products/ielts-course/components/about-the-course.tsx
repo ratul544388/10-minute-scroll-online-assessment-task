@@ -7,8 +7,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { HtmlText } from "@/app/components/html-text";
-import { SectionTitle } from "@/app/components/section-title";
+import { HtmlText } from "@/components/html-text";
+import { SectionTitle } from "@/components/section-title";
 
 interface AboutTheCourseProps {
   section: Section;

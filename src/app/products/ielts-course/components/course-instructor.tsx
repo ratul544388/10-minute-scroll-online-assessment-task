@@ -1,4 +1,4 @@
-import { HtmlText } from "@/app/components/html-text";
+import { HtmlText } from "@/components/html-text";
 import { Instructor, Section } from "@/types/product";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";

@@ -4,6 +4,7 @@ import { Features } from "./features";
 import { SectionSeparator } from "./section-separator";
 import { Pointers } from "./pointers";
 import { AboutTheCourse } from "./about-the-course";
+import { ExclusiveFeatures } from "./exclusive-features";
 
 interface SectionsProps {
   sections: Section[];
@@ -20,8 +21,10 @@ export const Sections = ({ sections }: SectionsProps) => {
       <Features section={getSection("features")} />
       <SectionSeparator />
       <Pointers section={getSection("pointers")} />
-      <SectionSeparator/>
+      <SectionSeparator />
       <AboutTheCourse section={getSection("about")} />
+      <SectionSeparator/>
+      <ExclusiveFeatures section={getSection("feature_explanations")} />
     </div>
   );
 };
