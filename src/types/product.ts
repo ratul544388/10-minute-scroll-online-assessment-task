@@ -57,7 +57,7 @@ export interface ProductApiResponse {
 }
 
 export type Instructor = {
-  type: SectionType,
+  type: SectionType;
   name: string;
   description: string;
   image: string;
@@ -66,19 +66,21 @@ export type Instructor = {
 };
 
 export type Feature = {
-  id: string
+  id: string;
   icon: string;
   title: string;
   subtitle: string;
-}
+};
 
 export type Pointer = {
   id: string;
   text: string;
-}
+};
 
 export type About = {
   id: string;
   title: string;
   description: string;
-}
+};
+
+export type Language = "bn" | "en";

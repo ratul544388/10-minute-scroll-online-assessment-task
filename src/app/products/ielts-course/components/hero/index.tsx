@@ -12,15 +12,20 @@ interface HeroProps {
 export const Hero = ({ product }: HeroProps) => {
   const { title, description } = product;
   return (
-    <div className="relative w-full bg-gradient-to-t from-blue-950/70 to-black">
-      <span className="absolute inset-0 bg-black -z-10" />
-      <Container className="flex max-w-[1200px] gap-10 lg:gap-20 py-4 md:py-10 lg:py-20">
+    <div
+      style={{
+        background:
+          "url(https://cdn.10minuteschool.com/images/ui_%281%29_1716445506383.jpeg)",
+      }}
+      className="relative w-full bg-center bg-no-repeat bg-cover!"
+    >
+      <Container className="flex max-w-[1200px] gap-10 py-4 md:py-10 lg:gap-20 lg:py-20">
         <HeroTexts
           title={title}
           description={description}
           className="hidden md:block"
         />
-        <Trailer product={product}/>
+        <Trailer product={product} />
       </Container>
     </div>
   );

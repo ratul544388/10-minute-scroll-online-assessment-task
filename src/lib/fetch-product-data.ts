@@ -1,8 +1,8 @@
-import { ProductApiResponse } from "@/types/product";
+import { Language, ProductApiResponse } from "@/types/product";
 import { cache } from "react";
 
 export const fetchProductData = cache(
-  async (lang: "en" | "bn" = "en"): Promise<ProductApiResponse> => {
+  async (lang: Language = "en"): Promise<ProductApiResponse> => {
     const res = await fetch(
       `https://api.10minuteschool.com/discovery-service/api/v1/products/ielts-course?lang=${lang}`,
       {
