@@ -19,20 +19,33 @@ export const CourseInstructor = ({ section }: CourseInstructorProps) => {
   } = values[0] as Instructor;
 
   return (
-    <article>
-      <h2 className="font-semibold text-xl">{name}</h2>
-      <div className="flex gap-4 mt-5">
-        <div className="relative size-18">
-          <Image src={image} alt={authorName} fill className="object-cover rounded-full" />
+    <section className="mt-7">
+      <article>
+        <h2 className="text-xl font-semibold">{name}</h2>
+        <div className="mt-5 flex gap-4 rounded-md sm:border sm:p-4">
+          <div className="relative size-18">
+            <Image
+              src={image}
+              alt={authorName}
+              fill
+              className="rounded-full object-cover"
+            />
+          </div>
+          <div>
+            <Link
+              href={`#skills/instructors/${slug}`}
+              className="group flex items-center gap-1"
+            >
+              <h3 className="text-lg">{authorName}</h3>
+              <ChevronRight className="text-muted-foreground size-4 transition ease-in group-hover:translate-x-1" />
+            </Link>
+            <HtmlText
+              html={description}
+              className="text-muted-foreground text-sm"
+            />
+          </div>
         </div>
-        <div>
-          <Link href={`#skills/instructors/${slug}`} className="group flex items-center gap-1">
-            <h3 className="text-lg">{authorName}</h3>
-            <ChevronRight className="size-4 text-muted-foreground group-hover:translate-x-1 transition ease-in"/>
-          </Link>
-          <HtmlText html={description} className="text-sm text-muted-foreground" />
-        </div>
-      </div>
-    </article>
+      </article>
+    </section>
   );
 };

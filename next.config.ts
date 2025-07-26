@@ -6,7 +6,10 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "cdn.10minuteschool.com",
-        pathname: "/images/**",
+      },
+      {
+        protocol: "https",
+        hostname: "s3.ap-southeast-1.amazonaws.com",
       },
     ],
   },

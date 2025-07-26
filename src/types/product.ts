@@ -18,9 +18,8 @@ export interface Seo {
 }
 
 export interface CtaText {
-  title: string;
-  subtitle?: string;
-  button_text: string;
+  name: string;
+  value: string;
 }
 
 export type SectionType =
@@ -65,3 +64,21 @@ export type Instructor = {
   short_description: string;
   slug: string;
 };
+
+export type Feature = {
+  id: string
+  icon: string;
+  title: string;
+  subtitle: string;
+}
+
+export type Pointer = {
+  id: string;
+  text: string;
+}
+
+export type About = {
+  id: string;
+  title: string;
+  description: string;
+}

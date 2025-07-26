@@ -21,14 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          "flex flex-col antialiased",
-          roboto.className,
-        )}
-      >
+      <body className={cn("antialiased", roboto.className)}>
         <Header />
-        <main className="flex-1">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );

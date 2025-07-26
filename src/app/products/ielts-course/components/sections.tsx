@@ -1,19 +1,27 @@
-import { Section } from "@/types/product";
+import { Section, SectionType } from "@/types/product";
 import { CourseInstructor } from "./course-instructor";
-import { Separator } from "@/components/ui/separator";
+import { Features } from "./features";
+import { SectionSeparator } from "./section-separator";
+import { Pointers } from "./pointers";
+import { AboutTheCourse } from "./about-the-course";
 
 interface SectionsProps {
-  sections: Section[]
+  sections: Section[];
 }
 
-export const Sections = ({
-    sections
-} : SectionsProps) => {
-    const section = sections.find((s) => s.type === "instructors") as Section;
+export const Sections = ({ sections }: SectionsProps) => {
+  const getSection = (type: SectionType) => {
+    return sections.find((section) => section.type === type) as Section;
+  };
+
   return (
-     <div>
-        <Separator className="min-h-2.5 my-4.5"/>
-        <CourseInstructor section={section}/>
-     </div>
-    );
-}
+    <div>
+      <CourseInstructor section={getSection("instructors")} />
+      <Features section={getSection("features")} />
+      <SectionSeparator />
+      <Pointers section={getSection("pointers")} />
+      <SectionSeparator/>
+      <AboutTheCourse section={getSection("about")} />
+    </div>
+  );
+};
