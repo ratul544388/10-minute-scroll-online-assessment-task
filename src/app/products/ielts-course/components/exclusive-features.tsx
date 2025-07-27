@@ -18,17 +18,23 @@ export const ExclusiveFeatures = ({ section }: ExclusiveFeaturesProps) => {
         {values.map(({ id, checklist, file_url, title }) => (
           <div key={id} className="first:mb-6 first:border-b first:pb-6">
             <h5 className="font-medium">{title}</h5>
-            <div className="flex flex-col justify-between w-full lg:flex-row gap-6">
+            <div className="flex w-full flex-col justify-between gap-6 lg:flex-row">
               <ul className="mt-4 space-y-3">
                 {checklist.map((item) => (
-                <li key={item} className="flex items-center gap-4">
+                  <li key={item} className="flex items-center gap-4">
                     <Check className="size-6 text-blue-500" />
                     <p className="text-muted-foreground">{item}</p>
                   </li>
                 ))}
               </ul>
               <div className="relative size-48 min-w-48">
-                <Image src={file_url} fill alt="image" className="object-cover rounded-lg bg-accent"/>
+                <Image
+                  src={file_url}
+                  fill
+                  alt="image"
+                  className="bg-accent rounded-lg object-cover"
+                  sizes="192px"
+                />
               </div>
             </div>
           </div>

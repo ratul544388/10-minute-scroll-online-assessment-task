@@ -13,8 +13,17 @@ interface StickyCheckListProps {
 export const StickyCheckList = ({ product }: StickyCheckListProps) => {
   const { isHidden } = useHiddenTrailerStore();
   return (
-    <div className={cn("md:min-w-[300px] hidden md:block lg:min-w-[400px] bg-background")}>
-      <div className={cn("sticky top-[100px] border rounded-lg pb-5", !isHidden && "hidden")}>
+    <div
+      className={cn(
+        "bg-background hidden md:block md:min-w-[300px] lg:min-w-[400px]",
+      )}
+    >
+      <div
+        className={cn(
+          "sticky top-[100px] rounded-lg border pb-5",
+          !isHidden && "hidden",
+        )}
+      >
         <CourseEnrollment ctaText={product.cta_text} />
         <CheckList checkList={product.checklist} className="px-3" />
       </div>

@@ -52,6 +52,7 @@ export const TrailerCarousel = ({ media }: TrailerCarouselProps) => {
                       src={resource_value}
                       alt={`Image ${i + 1}`}
                       fill
+                      sizes="(min-width: 1024px) 400px, (min-width: 768px) 300px, 100vw"
                       className="bg-accent rounded-sm object-cover"
                     />
                   )}
@@ -72,6 +73,7 @@ export const TrailerCarousel = ({ media }: TrailerCarouselProps) => {
                             alt={`Video Thumbnail ${i + 1}`}
                             fill
                             className="object-cover"
+                            sizes="(min-width: 1024px) 400px, (min-width: 768px) 300px, 100vw"
                           />
                           <button
                             onClick={() => setPlayingIndex(i)}
@@ -108,7 +110,8 @@ export const TrailerCarousel = ({ media }: TrailerCarouselProps) => {
                   fill
                   src={thumbnail_url || resource_value}
                   alt="Thumbnail"
-                  className="bg-black md:bg-white object-cover"
+                  sizes="55px"
+                  className="bg-black object-cover md:bg-white"
                 />
                 {resource_type === "video" && (
                   <span className="absolute top-1/2 left-1/2 flex size-3.5 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white ring-[3px] ring-white/20">

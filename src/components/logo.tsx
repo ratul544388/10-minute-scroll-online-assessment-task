@@ -13,7 +13,7 @@ export const Logo = ({
       href={href}
       className={cn("relative block aspect-[300/83] w-[100px]", className)}
     >
-      <Image fill src="/logo.png" alt="Logo" />
+      <Image fill src="/logo.png" alt="Logo" sizes="100px" />
     </Link>
   );
 };

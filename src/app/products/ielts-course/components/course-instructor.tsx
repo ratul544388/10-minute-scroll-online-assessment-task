@@ -29,6 +29,7 @@ export const CourseInstructor = ({ section }: CourseInstructorProps) => {
               alt={authorName}
               fill
               className="rounded-full object-cover"
+              sizes="72px"
             />
           </div>
           <div>

@@ -16,7 +16,7 @@ export const Features = ({ section }: FeaturesProps) => {
         {values.map(({ id, icon, title, subtitle }) => (
           <li key={id} className="flex gap-2.5">
             <div className="relative size-9 min-w-9">
-              <Image src={icon} alt="Icon" fill className="" />
+              <Image src={icon} alt="Icon" fill className="" sizes="36px" />
             </div>
             <div>
               <p className="text font-medium text-white">{title}</p>
