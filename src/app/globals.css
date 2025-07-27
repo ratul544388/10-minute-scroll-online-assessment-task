@@ -42,7 +42,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --spacing-header: 72px;
+  --spacing-header: 65px;
   --spacing-main: calc(100vh - var(--spacing-header));
 }
 

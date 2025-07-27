@@ -10,15 +10,16 @@ export const useQueryParams = () => {
     query,
     clearCurrentQuery,
     toggle = true,
+    scroll = true,
   }: {
     query: Record<string, string | number>;
     clearCurrentQuery?: boolean;
     toggle?: boolean;
+    scroll?: boolean;
   }) => {
     const currentQuery = clearCurrentQuery
       ? {}
       : qs.parse(searchParams.toString());
-
 
     if (toggle) {
       Object.entries(query).forEach(([key, value]) => {
@@ -38,10 +39,10 @@ export const useQueryParams = () => {
           ...query,
         },
       },
-      { skipEmptyString: true, skipNull: true }
+      { skipEmptyString: true, skipNull: true },
     );
 
-    router.push(url);
+    router.push(url, { scroll });
   };
 
   return { setQueryParams, searchParams };

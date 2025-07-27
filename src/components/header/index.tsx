@@ -11,7 +11,7 @@ import { NavLinks } from "./nav-links";
 const Header = () => {
   return (
     <header className="bg-background overflow-x-clip h-header sticky top-0 z-50 w-full border-b">
-      <Container className="flex h-full items-center gap-4 py-4">
+      <Container className="flex h-full items-center gap-4 py-4 md:px-8">
         <Logo />
         <SearchInput  />
         <NavLinks className="hidden lg:block"/>
@@ -33,8 +33,8 @@ const Header = () => {
           <Link
             href="#"
             className={buttonVariants({
-              className: "px-3! md:px-6!",
               size: "sm",
+              className: "px-3! md:h-9 md:px-6!",
             })}
           >
             Login

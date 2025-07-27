@@ -22,9 +22,9 @@ export const Sections = ({ sections }: SectionsProps) => {
       <SectionSeparator />
       <Pointers section={getSection("pointers")} />
       <SectionSeparator />
-      <AboutTheCourse section={getSection("about")} />
-      <SectionSeparator/>
       <ExclusiveFeatures section={getSection("feature_explanations")} />
+      <SectionSeparator/>
+      <AboutTheCourse section={getSection("about")} />
     </div>
   );
 };

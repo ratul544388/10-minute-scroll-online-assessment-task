@@ -9,12 +9,15 @@ export const LanguageChangerButton = () => {
   const language = (searchParams.get("lang") as Language) || "en";
 
   const handleClick = () => {
-    setQueryParams({ query: { lang: language === "en" ? "bn" : "en" } });
+    setQueryParams({
+      query: { lang: language === "en" ? "bn" : "en" },
+      scroll: false,
+    });
   };
 
   return (
-      <Button variant="outline" onClick={handleClick} size="sm">
-        {language.toUpperCase()}
-      </Button>
+    <Button variant="outline" onClick={handleClick} size="sm">
+      {language.toUpperCase()}
+    </Button>
   );
 };
