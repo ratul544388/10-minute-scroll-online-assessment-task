@@ -10,7 +10,6 @@ export interface Checklist {
   icon: string;
 }
 
-// ask question about more seo things later
 export interface Seo {
   title: string;
   description: string;
